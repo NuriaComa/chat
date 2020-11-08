@@ -1,0 +1,14 @@
+<div class="chat">
+  <div class="chat__out" (click)="logOut()">Log Out</div>
+  <div class="chat__container">
+    <div class="chat__box">
+      <span class="chat__box--text" *ngFor="let message of messages" [class.myMessage] = message.mine >{{message.text}}</span>
+    </div>
+    <form class="chat__form" [formGroup]="chatForm" (ngSubmit)="onSubmit()">
+      <input class="chat__input" placeholder="message"  formControlName="message" required>
+      <button class="chat__button" [class.disabled]= "!chatForm.valid"  [disabled]="!chatForm.valid">Send</button>
+    </form>
+  </div>
+</div>
+
+

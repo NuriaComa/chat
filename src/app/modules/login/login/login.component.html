@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <div class="login">
+    <div class="login__container">
+      <h1 class="login__title">Sign in</h1>
+      <form class="login__form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <input class="login__input" placeholder="User"  formControlName="user" required>
+        <input class="login__input" placeholder="Password" type="password" formControlName="password" required>
+        <button class="login__button" [class.disabled]= "!loginForm.valid"  [disabled]="!loginForm.valid">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+

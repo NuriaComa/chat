@@ -1,0 +1,97 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+
+  &__out {
+    align-self: flex-end;
+    margin-right: 60px;
+    cursor: pointer;
+    color: #3f6682;
+  }
+
+  &__container {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @media(max-width: 540px) {
+      width: 100%;
+    }
+
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 90%;
+    color: #fff;
+    border-radius: 5%;
+    background-color: rgba(255, 255, 255, 0.60);
+    overflow-y: scroll;
+
+    @media(max-width: 540px) {
+      border-radius: 0;
+    }
+
+    &--text {
+      background-color: #3f6682;
+      max-width: 70%;
+      border-radius: 10px;
+      margin: 5px;
+      padding: 5px;
+      display: flex;
+
+      &.myMessage {
+        background-color: #3f668285;
+        display: flex;
+        justify-content: flex-end;
+        align-self: flex-end;
+        width: 70%;
+      }
+    }
+  }
+  &__form {
+    width: 100%;
+
+    @media(max-width: 540px) {
+      width: 80%;
+    }
+  }
+  &__input {
+    width: 78%;
+    height: 30px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 5px;
+    outline: none;
+    border: none;
+
+    @media(max-width: 540px) {
+      width: 70%;
+    }
+  }
+  &__button {
+    width: 20%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    height: 32px;
+    outline: none;
+    background-color: #3f6682;
+    color: #fff;
+
+    &.disabled {
+      background-color: #a5a3a6;
+      color: #fff;
+    }
+
+    @media(max-width: 540px) {
+      width: 25%;
+    }
+  }
+}
